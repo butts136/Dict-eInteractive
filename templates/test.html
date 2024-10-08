@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test des Mots</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mot {{ index }} sur {{ total }}</h1>
+    <p>Nombre de fautes : {{ mistakes }}</p>
+    
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="post">
+        <p>Veuillez écrire le mot dicté : {{ word }}</p>
+        <input type="text" name="user_input" required autocomplete="off" autofocus>
+        <input type="submit" value="Valider">
+    </form>
+</body>
+</html>
