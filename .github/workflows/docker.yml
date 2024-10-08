@@ -20,8 +20,8 @@ jobs:
         with:
           context: .
           push: true
-          tags: butts136/DicteeInteractive:latest
+          tags: butts136/dicteeinteractive:latest
 
       - name: Run Docker Container
         run: |
-          docker run -d -p 1010:1010 --name butts136/DicteeInteractive:latest
+          docker run -d -p 1010:1010 --name butts136/dicteeinteractive:latest
