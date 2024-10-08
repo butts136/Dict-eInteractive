@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord Administrateur</title>
+</head>
+<body>
+    <h1>Gestion des Mots</h1>
+
+    <h2>Ajouter un mot</h2>
+    <form method="post">
+        <input type="text" name="new_word" placeholder="Nouveau mot" required>
+        <input type="submit" name="add" value="Ajouter">
+    </form>
+
+    <h2>Liste des mots</h2>
+    <form method="post">
+        <ul>
+            {% for word in words %}
+            <li>
+                {{ word }}
+                <button type="submit" name="delete" value="{{ word }}">Supprimer</button>
+            </li>
+            {% endfor %}
+        </ul>
+    </form>
+
+    <a href="{{ url_for('logout') }}">Se déconnecter</a>
+</body>
+</html>
