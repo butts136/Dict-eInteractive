@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3  # Mise à jour vers v3
+        uses: actions/checkout@v3.1.0  # Mise à jour vers v3.1.0
 
       - name: Log in to GitHub Container Registry
         run: echo "${{ secrets.CR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
